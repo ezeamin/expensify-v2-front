@@ -17,7 +17,14 @@
     "jsx": "react-jsx",
     "noImplicitAny": true,
     "noImplicitThis": true,
-    "strictNullChecks": true
+    "strictNullChecks": true,
+    "baseUrl": "src",
+    "paths": {
+      "@index/*": ["/*"],
+      "@auth/*": ["components/Auth/*"],
+      "@components/*": ["components/*"],
+      "@constants/*": ["constants/*"],
+    }
   },
   "include": ["src"]
 }
