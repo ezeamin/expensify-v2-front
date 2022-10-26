@@ -24,6 +24,7 @@
       "@auth/*": ["components/Auth/*"],
       "@components/*": ["components/*"],
       "@constants/*": ["constants/*"],
+      "@views/*": ["views/*"],
     }
   },
   "include": ["src"]

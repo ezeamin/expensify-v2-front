@@ -1,6 +1,7 @@
 export interface RouteType {
   path: string;
   component: React.ComponentElement;
+  args?: any;
 }
 
 export type RoutesTypes = {
@@ -13,5 +14,9 @@ export type RoutesTypes = {
 
   MAIN: {
     HOME: RouteType;
+  };
+  
+  OTHER: {
+    ERROR_404: RouteType;
   };
 };
