@@ -1,9 +1,6 @@
-import React from 'react';
-
 export interface RouteType {
   path: string;
   component: React.ComponentElement;
-  needsLogin: boolean;
 }
 
 export type RoutesTypes = {
@@ -14,5 +11,7 @@ export type RoutesTypes = {
     RESET_PASSWORD_FORM: RouteType;
   };
 
-  HOME: RouteType;
-}
+  MAIN: {
+    HOME: RouteType;
+  };
+};
