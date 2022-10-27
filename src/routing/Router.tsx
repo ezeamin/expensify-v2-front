@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import routes from '../constants/routes';
-import { RoutesTypes } from '@constants/routesTypes';
+import { RoutesTypes } from '@constants/types/routesTypes';
 import PrivateRoute from './PrivateRoute';
 import Layout from 'views/Layout/Layout';
 

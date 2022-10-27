@@ -1,6 +1,6 @@
 import { Overview } from 'views/index';
 import { Login } from 'components/Auth/index';
-import { RoutesTypes } from './routesTypes';
+import { RoutesTypes } from './types/routesTypes';
 import { viewList } from './authViews';
 import Error404 from 'views/Error/Error404';
 
@@ -43,6 +43,18 @@ const routes: RoutesTypes = {
       path: '/',
       component: Overview,
     },
+    DATA_MENU:{
+      path: '/data-menu',
+      component: Overview,
+    },
+    DATA_TABLES:{
+      path: '/data-tables',
+      component: Overview,
+    },
+    STATS: {
+      path: '/stats',
+      component: Overview,
+    }
   },
   
   OTHER: {

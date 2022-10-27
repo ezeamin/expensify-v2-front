@@ -14,6 +14,9 @@ export type RoutesTypes = {
 
   MAIN: {
     HOME: RouteType;
+    DATA_MENU: RouteType;
+    DATA_TABLES: RouteType;
+    STATS: RouteType;
   };
   
   OTHER: {

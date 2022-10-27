@@ -25,6 +25,12 @@ const es = {
     MAIL_SEND_ERROR: 'Error al enviar el correo',
   },
 
+  CATEGORIES: 'Categorias',
+  ACCOUNTS: 'Cuentas',
+  STATS: 'Estadísticas',
+  TABLES: 'Tablas',
+  DATA: 'Datos',
+
   DAY: 'Día',
   WEEK: 'Semana',
   MONTH: 'Mes',
