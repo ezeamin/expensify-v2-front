@@ -23,6 +23,7 @@ const NavItem = (props: NavItemPropsType) => {
       sx={{
         fontSize: '1.2rem',
         height: '100%',
+        width: '100%',
         color: active ? 'primary.main' : 'gray.main',
       }}
     >

@@ -17,8 +17,12 @@ export type RoutesTypes = {
     DATA_MENU: RouteType;
     DATA_TABLES: RouteType;
     STATS: RouteType;
+    EXPENSE: RouteType;
+    INCOME: RouteType;
+    TRANSFER: RouteType;
+    DEBT: RouteType;
   };
-  
+
   OTHER: {
     ERROR_404: RouteType;
   };

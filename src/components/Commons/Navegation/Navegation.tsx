@@ -1,53 +1,50 @@
-import { Paper, Stack } from '@mui/material';
-import { stateType } from 'app/storeTypes';
 import { useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+
+import { stateType } from 'app/storeTypes';
 import viewsList from './data/viewsList';
+
+import { Container, Paper, Stack } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
+
 import NavItem from './NavItem';
+import SpeedDialMenu from './SpeedDialMenu';
 
 const Navegation = () => {
-  const navigate = useNavigate();
-
   const activeNavegationId: string = useSelector(
     (state: stateType) => state.globalData.navegationActive
   );
 
   return (
-    <Paper
-      sx={{
-        position: 'fixed',
-        width: '100%',
-        bottom: 0,
-        height: '4rem',
-        backgroundColor: 'white.main',
-      }}
-    >
-      <Stack
-        direction='row'
-        justifyContent='space-evenly'
-        alignItems='center'
-        sx={{ height: '100%' }}
+    <>
+      <Paper
+        sx={{
+          position: 'fixed',
+          width: '100%',
+          bottom: 0,
+          height: '4rem',
+          backgroundColor: 'white.main',
+          boxShadow: '0 0 10px 1px #00000018',
+        }}
       >
-        {viewsList.map((view) => (
-          <NavItem
-            key={view.name}
-            {...view}
-            active={activeNavegationId === view.id}
-          />
-        ))}
-      </Stack>
-      {/* new button */}
-      {/* <div className='navegation__box__newButton'>
-        <button
-          onClick={() => navigate('/newExpense')}
-          className='navegation__box__newButton__button'
-        >
-          <div className='navegation__box__newButton__circle'>
-            <i className='fa-solid fa-plus fa-2x'></i>
-          </div>
-        </button>
-      </div> */}
-    </Paper>
+        <Container sx={{ height: '100%' }}>
+          <Stack
+            direction='row'
+            justifyContent='space-evenly'
+            alignItems='center'
+            sx={{ height: '100%' }}
+          >
+            {viewsList.map((view) => (
+              <NavItem
+                key={view.name}
+                {...view}
+                active={activeNavegationId === view.id}
+              />
+            ))}
+          </Stack>
+        </Container>
+      </Paper>
+      <SpeedDialMenu />
+    </>
   );
 };
 

@@ -12,3 +12,9 @@ export interface NavItemPropsType {
     path: string;
     active: boolean;
 }
+
+export interface speedDialListType {
+    name: string;
+    path: string;
+    icon: JSX.Element;
+}

@@ -43,26 +43,42 @@ const routes: RoutesTypes = {
       path: '/',
       component: Overview,
     },
-    DATA_MENU:{
+    DATA_MENU: {
       path: '/data-menu',
       component: Overview,
     },
-    DATA_TABLES:{
+    DATA_TABLES: {
       path: '/data-tables',
       component: Overview,
     },
     STATS: {
       path: '/stats',
       component: Overview,
-    }
+    },
+    EXPENSE: {
+      path: '/expense',
+      component: Overview,
+    },
+    INCOME: {
+      path: '/income',
+      component: Overview,
+    },
+    TRANSFER: {
+      path: '/transfer',
+      component: Overview,
+    },
+    DEBT: {
+      path: '/debt',
+      component: Overview,
+    },
   },
-  
+
   OTHER: {
     ERROR_404: {
       path: '*',
       component: Error404,
     },
-  }
+  },
 };
 
 export default routes;
