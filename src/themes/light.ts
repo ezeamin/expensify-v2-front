@@ -2,6 +2,9 @@ const lightTheme = {
   primary: {
     main: '#42224a',
     light: '#8f659a',
+    variant1: "#4f215a",
+    variant2: "#5a3f61",
+    variant3: "#55385c",
     contrastText: '#fff',
   },
   secondary: {

@@ -49,6 +49,7 @@
   "DAYS_PASSED": "Días transcurridos",
   "DAYS_LEFT": "Días restantes",
   "SPENT": "Gastado",
+  "AVAILABLE": "Disponible",
   "DAILY_AVERAGE": "Promedio diario",
   "LEFT_BALANCE_MSG": "De continuar así, llegarás a fin de mes con",
   "CATEGORY_CHART": "Gráfico por categoría",
@@ -68,20 +69,20 @@
   "EXPENSE": "Gasto",
   "INCOME": "Ingreso",
 
-  "MONTHS": [
-    "Enero",
-    "Febrero",
-    "Marzo",
-    "Abril",
-    "Mayo",
-    "Junio",
-    "Julio",
-    "Agosto",
-    "Septiembre",
-    "Octubre",
-    "Noviembre",
-    "Diciembre"
-  ],
+  "MONTHS": {
+    "JANUARY": "Enero",
+    "FEBREARY": "Febrero",
+    "MARCH": "Marzo",
+    "APRIL": "Abril",
+    "MAY": "Mayo",
+    "JUNE": "Junio",
+    "JULY": "Julio",
+    "AUGUST": "Agosto",
+    "SEPTEMBER": "Septiembre",
+    "OCTOBER": "Octubre",
+    "NOVEMBER": "Noviembre",
+    "DECEMBER": "Diciembre"
+  },
 
   "DAYS": [
     "Domingo",
@@ -93,15 +94,10 @@
     "Sábado"
   ],
 
-  "DAYS_SHORT": [
-    "Dom",
-    "Lun",
-    "Mar",
-    "Mié",
-    "Jue",
-    "Vie",
-    "Sáb"
-  ],
+  "DAYS_SHORT": ["Dom", "Lun", "Mar", "Mié", "Jue", "Vie", "Sáb"],
+
+  "TODAY": "Hoy",
+  "YESTERDAY": "Ayer",
 
   "CATEGORY": "Categoría",
   "CONCEPT": "Concepto",
@@ -196,7 +192,7 @@
   "INITIAL_MONTHLY_LIMIT": "Límite mensual inicial",
   "REGISTER_BUTTON": "Registrarse",
   "NAME_OR_NICKNAME": "Nombre o apodo",
-  
+
   "RECOVER_PASSWORD": "Recuperar contraseña",
   "RECOVER_PASSWORD_MSG": "Enviaremos un correo de recuperacion a la casilla que corresponda con tu DNI",
   "SEND": "Enviar",

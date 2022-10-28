@@ -1,20 +1,17 @@
 import { useSelector } from 'react-redux';
 
-import { useTranslation } from 'react-i18next';
+import { StateType } from 'app/storeTypes';
 
-import { Typography } from '@mui/material';
-
-import { StateType } from 'app/storeTypes'
-;
+import { Header,BalanceCard,List } from 'components/Overview';
 
 const Overview = () => {
   const user = useSelector((state: StateType) => state.user.user);
 
-  const { t } = useTranslation();
-
   return (
     <>
-      <Typography>{`${t('HELLO')}, ${user.name}`}</Typography>
+      <Header name={user.name} />
+      <BalanceCard user={user} />
+      <List />
     </>
   );
 };

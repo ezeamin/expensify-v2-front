@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 import SpeedDialIcon from '@mui/material/SpeedDialIcon';
 
-import { SpeedDial, SpeedDialAction } from '@mui/material';
+import { SpeedDial, SpeedDialAction, Backdrop } from '@mui/material';
 
 import { speedDialList } from './data/speedDialList';
 
@@ -38,6 +38,7 @@ const SpeedDialMenu = () => {
         },
       }}
     >
+      <Backdrop open={opened} sx={{mb: "64px"}} />
       {speedDialList.map((item) => (
         <SpeedDialAction
           tooltipOpen

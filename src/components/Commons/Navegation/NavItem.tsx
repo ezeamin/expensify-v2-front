@@ -3,9 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 import { setNavegationActive } from 'features/globalData/globalDataSlice';
 
-import { Stack, Typography } from '@mui/material';
-
-import { NavButtonStyled } from '../styled';
+import { Stack, Typography, Button } from '@mui/material';
 
 import { NavItemPropsType } from './types/navegationTypes';
 
@@ -21,7 +19,7 @@ const NavItem = (props: NavItemPropsType) => {
   };
 
   return (
-    <NavButtonStyled
+    <Button
       onClick={handleClick}
       sx={{
         fontSize: '1.2rem',
@@ -42,7 +40,7 @@ const NavItem = (props: NavItemPropsType) => {
           {name}
         </Typography>
       </Stack>
-    </NavButtonStyled>
+    </Button>
   );
 };
 
