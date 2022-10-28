@@ -1,15 +1,17 @@
-import themes from "constants/themes";
-import { createSlice } from "@reduxjs/toolkit";
-import { GlobalDataState } from "./globalDataTypes";
-import viewsList from "components/Commons/Navegation/data/viewsList";
+import themes from 'constants/themes';
+import { createSlice } from '@reduxjs/toolkit';
+import { GlobalDataState } from './globalDataTypes';
+import viewsList from 'components/Commons/Navegation/data/viewsList';
+import { LanguagesList } from 'constants/languagesList';
 
 const initialState: GlobalDataState = {
   theme: themes.LIGHT,
   navegationActive: viewsList[0].id,
+  language: LanguagesList.SPANISH,
 };
 
 export const globalDataSlice = createSlice({
-  name: "globalData",
+  name: 'globalData',
   initialState,
   reducers: {
     setTheme: (state, action) => {
@@ -17,10 +19,10 @@ export const globalDataSlice = createSlice({
     },
     setNavegationActive: (state, action) => {
       state.navegationActive = action.payload;
-    }
+    },
   },
 });
 
-export const { setTheme,setNavegationActive } = globalDataSlice.actions;
+export const { setTheme, setNavegationActive } = globalDataSlice.actions;
 
 export default globalDataSlice.reducer;

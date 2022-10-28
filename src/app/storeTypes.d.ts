@@ -1,4 +1,4 @@
-export interface stateType {
+export interface StateType {
   user: UserState;
   globalData: GlobalDataState;
 }
