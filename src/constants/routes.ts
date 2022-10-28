@@ -71,6 +71,10 @@ const routes: RoutesTypes = {
       path: '/debt',
       component: Overview,
     },
+    PAYMENT: {
+      path: '/payment',
+      component: Overview,
+    }
   },
 
   OTHER: {

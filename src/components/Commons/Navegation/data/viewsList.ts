@@ -11,15 +11,15 @@ const viewsList: viewType[] = [
     path: routes.MAIN.HOME.path,
   },
   {
-    id: "DATA_MENU",
-    name: es.DATA,
-    icon: 'fa-solid fa-list',
+    id: "CATEGORIES",
+    name: es.CATEGORIES,
+    icon: 'fa-solid fa-utensils',
     path: routes.MAIN.DATA_MENU.path,
   },
   {
-    id: "DATA_TABLES",
-    name: es.TABLES,
-    icon: 'fa-solid fa-table-list',
+    id: "ACCOUNTS",
+    name: es.ACCOUNTS,
+    icon: 'fa-brands fa-cc-visa',
     path: routes.MAIN.DATA_TABLES.path,
   },
   {

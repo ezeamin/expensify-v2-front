@@ -30,6 +30,7 @@ const es = {
   STATS: 'Estadísticas',
   TABLES: 'Tablas',
   DATA: 'Datos',
+  SCHEDULED_PAYMENT: 'Pago programado',
 
   DAY: 'Día',
   WEEK: 'Semana',
@@ -187,24 +188,26 @@ const es = {
   NEW_PAYMENT: 'Nuevo pago',
   PAYMENT_MSG: 'Acá podes cargar los pagos recurrentes',
 
-  LOGIN_MSG: "Por favor, ingresa tus datos",
-  LOGIN_BUTTON: "Continuar",
-  PASSWORD: "Contraseña",
-  FORGOT_PASSWORD: "¿Olvidaste tu contraseña?",
-  REMEMBER_ME: "Recordarme",
-  NEW_USER_MSG: "¿No tenés cuenta? Registrate acá",
-  PASSWORD_REQUIREMENTS: "La contraseña debe tener al menos 6 caracteres, una mayuscula, una minuscula y un numero",
-  REPEAT_PASSWORD: "Repetir contraseña",
-  INITIAL_MONTHLY_LIMIT: "Límite mensual inicial",
-  REGISTER_BUTTON: "Registrarse",
-  NAME_OR_NICKNAME: "Nombre o apodo",
+  LOGIN_MSG: 'Por favor, ingresa tus datos',
+  LOGIN_BUTTON: 'Continuar',
+  PASSWORD: 'Contraseña',
+  FORGOT_PASSWORD: '¿Olvidaste tu contraseña?',
+  REMEMBER_ME: 'Recordarme',
+  NEW_USER_MSG: '¿No tenés cuenta? Registrate acá',
+  PASSWORD_REQUIREMENTS:
+    'La contraseña debe tener al menos 6 caracteres, una mayuscula, una minuscula y un numero',
+  REPEAT_PASSWORD: 'Repetir contraseña',
+  INITIAL_MONTHLY_LIMIT: 'Límite mensual inicial',
+  REGISTER_BUTTON: 'Registrarse',
+  NAME_OR_NICKNAME: 'Nombre o apodo',
 
-  RECOVER_PASSWORD: "Recuperar contraseña",
-  RECOVER_PASSWORD_MSG: "Enviaremos un correo de recuperacion a la casilla que corresponda con tu DNI",
-  SEND: "Enviar",
-  RECOVER_PASSWORD_EMAIL_SENT: "Enviado a",
-  NEW_PASSWORD_MSG: "Por favor, ingresa tu nueva contraseña",
-  NEW_PASSWORD: "Nueva contraseña",
+  RECOVER_PASSWORD: 'Recuperar contraseña',
+  RECOVER_PASSWORD_MSG:
+    'Enviaremos un correo de recuperacion a la casilla que corresponda con tu DNI',
+  SEND: 'Enviar',
+  RECOVER_PASSWORD_EMAIL_SENT: 'Enviado a',
+  NEW_PASSWORD_MSG: 'Por favor, ingresa tu nueva contraseña',
+  NEW_PASSWORD: 'Nueva contraseña',
 };
 
 export default es;

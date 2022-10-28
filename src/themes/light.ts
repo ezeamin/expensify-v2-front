@@ -15,6 +15,24 @@ const lightTheme = {
   white: {
     main: '#fff',
     contrastText: '#000',
+  },
+  green: {
+    main: '#2dd470',
+    dark: "#3f8d59",
+    light: "#36ff68",
+    contrastText: '#fff',
+  },
+  red: {
+    main: '#ff5a5f',
+    dark: "#a54040",
+    light: "#ff5f5f",
+    contrastText: '#fff',
+  },
+  yellow: {
+    main: '#ffb400',
+    dark: "#bd8400",
+    light: "#ffcc53",
+    contrastText: '#fff',
   }
 };
 

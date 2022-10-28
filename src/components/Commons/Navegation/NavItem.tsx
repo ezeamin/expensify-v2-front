@@ -1,7 +1,10 @@
-import { Stack, Typography } from '@mui/material';
-import { setNavegationActive } from 'features/globalData/globalDataSlice';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+
+import { setNavegationActive } from 'features/globalData/globalDataSlice';
+
+import { Stack, Typography } from '@mui/material';
+
 import { NavButtonStyled } from '../styled';
 
 import { NavItemPropsType } from './types/navegationTypes';

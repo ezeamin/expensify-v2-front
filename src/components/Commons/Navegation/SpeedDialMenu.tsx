@@ -1,11 +1,22 @@
-import AddRoundedIcon from '@mui/icons-material/AddRounded';
+import { useState } from 'react';
+
+import { useNavigate } from 'react-router-dom';
+
+import SpeedDialIcon from '@mui/material/SpeedDialIcon';
 
 import { SpeedDial, SpeedDialAction } from '@mui/material';
-import { useNavigate } from 'react-router-dom';
+
 import { speedDialList } from './data/speedDialList';
 
 const SpeedDialMenu = () => {
+  const [opened, setOpened] = useState(false);
+
   const navigate = useNavigate();
+
+  const handleClick = (path: string) => {
+    setOpened(false);
+    navigate(path);
+  };
 
   return (
     <SpeedDial
@@ -15,11 +26,15 @@ const SpeedDialMenu = () => {
         bottom: '5rem',
         right: '1rem',
       }}
-      icon={<AddRoundedIcon sx={{ width: '2.25rem', height: '2.25rem' }} />}
+      open={opened}
+      onOpen={() => setOpened(true)}
+      onClose={() => setOpened(false)}
+      icon={<SpeedDialIcon />}
       FabProps={{
         sx: {
           backgroundColor: 'secondary.main',
           color: 'secondary.contrastText',
+          transition: 'all 0.15s !important',
         },
       }}
     >
@@ -28,7 +43,23 @@ const SpeedDialMenu = () => {
           tooltipOpen
           tooltipTitle={item.name}
           icon={item.icon}
-          onClick={() => navigate(item.path)}
+          key={item.name}
+          onClick={() => handleClick(item.path)}
+          FabProps={{
+            sx: {
+              backgroundColor: item.color + '.main',
+              color: item.color + '.contrastText',
+              transition: 'all 0.15s',
+              '&:hover': {
+                backgroundColor: item.color + '.dark',
+              },
+            },
+          }}
+          sx={{
+            '& span': {
+              fontWeight: 'bold',
+            },
+          }}
         />
       ))}
     </SpeedDial>
