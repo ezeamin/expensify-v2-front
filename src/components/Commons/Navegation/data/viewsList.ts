@@ -1,30 +1,30 @@
 import routes from "constants/routes";
-import es from "lang/es";
+import lang from "lang";
 
 import { viewType } from "../types/navegationTypes";
 
 const viewsList: viewType[] = [
   {
     id: "OVERVIEW",
-    name: es.OVERVIEW,
+    name: lang.t('OVERVIEW'),
     icon: 'fa-solid fa-user-astronaut',
     path: routes.MAIN.HOME.path,
   },
   {
     id: "CATEGORIES",
-    name: es.CATEGORIES,
+    name: lang.t('CATEGORIES'),
     icon: 'fa-solid fa-utensils',
     path: routes.MAIN.DATA_MENU.path,
   },
   {
     id: "ACCOUNTS",
-    name: es.ACCOUNTS,
+    name: lang.t('ACCOUNTS'),
     icon: 'fa-brands fa-cc-visa',
     path: routes.MAIN.DATA_TABLES.path,
   },
   {
     id: "STATS",
-    name: es.STATS,
+    name: lang.t('STATS'),
     icon: 'fa-solid fa-chart-line',
     path: routes.MAIN.STATS.path,
   },

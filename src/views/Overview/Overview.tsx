@@ -1,16 +1,20 @@
-import { Typography } from '@mui/material';
 import { useSelector } from 'react-redux';
-import { StateType } from 'app/storeTypes';
-import useLang from 'hooks/useLang';
+
+import { useTranslation } from 'react-i18next';
+
+import { Typography } from '@mui/material';
+
+import { StateType } from 'app/storeTypes'
+;
 
 const Overview = () => {
   const user = useSelector((state: StateType) => state.user.user);
-  
-  const lang = useLang();    
+
+  const { t } = useTranslation();
 
   return (
     <>
-      <Typography>{`${lang.HELLO}, ${user.name}`}</Typography>
+      <Typography>{`${t('HELLO')}, ${user.name}`}</Typography>
     </>
   );
 };
