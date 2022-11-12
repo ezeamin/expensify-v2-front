@@ -23,7 +23,7 @@ const NavItem = (props: NavItemPropsType) => {
       <Stack
         sx={{
           fontSize: '1.2rem',
-          color: active ? 'primary.main' : 'gray.main',
+          color: active ? 'primary.main' : 'gray.navbar',
         }}
         onClick={handleClick}
       >

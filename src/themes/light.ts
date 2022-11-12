@@ -2,17 +2,21 @@ const lightTheme = {
   primary: {
     main: '#42224a',
     light: '#8f659a',
-    variant1: "#4f215a",
-    variant2: "#5a3f61",
-    variant3: "#55385c",
+    variant1: '#4f215a',
+    variant2: '#5a3f61',
+    variant3: '#55385c',
     contrastText: '#fff',
   },
   secondary: {
     main: '#ef8767',
     contrastText: '#fff',
   },
+  mainText: {
+    main: '#42224a',
+  },
   gray: {
     main: '#9ca1a9',
+    navbar: '#9ca1a9',
     light: '#f7f4f7',
   },
   white: {
@@ -21,22 +25,22 @@ const lightTheme = {
   },
   green: {
     main: '#2dd470',
-    dark: "#3f8d59",
-    light: "#36ff68",
+    dark: '#3f8d59',
+    light: '#36ff68',
     contrastText: '#fff',
   },
   red: {
     main: '#ff5a5f',
-    dark: "#a54040",
-    light: "#ff5f5f",
+    dark: '#a54040',
+    light: '#ff5f5f',
     contrastText: '#fff',
   },
   yellow: {
     main: '#ffb400',
-    dark: "#bd8400",
-    light: "#ffcc53",
+    dark: '#bd8400',
+    light: '#ffcc53',
     contrastText: '#fff',
-  }
+  },
 };
 
 export default lightTheme;

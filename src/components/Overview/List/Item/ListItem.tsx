@@ -27,7 +27,7 @@ const ListItem = (props: any) => {
       break;
     case movements.INCOME:
       moneyPrefix = '+ $';
-      color = 'green.main';
+      color = 'green.dark';
       break;
     case movements.TRANSFER:
       moneyPrefix = '$';
@@ -56,7 +56,7 @@ const ListItem = (props: any) => {
       <Stack direction='row' alignItems='flex-start'>
         <Icon icon={category?.icon || account.icon} type={type} />
         <Stack justifyContent="center" sx={{ height: "100%", ml: 2, mr: 1, width: '100%', textAlign: 'start' }}>
-          <Typography variant='body1' component='p' fontWeight='bold'>
+          <Typography color='mainText.main' variant='body1' component='p' fontWeight='bold'>
             {name}
           </Typography>
           {category?.name && (
@@ -71,7 +71,7 @@ const ListItem = (props: any) => {
           )}
         </Stack>
         <Stack sx={{ textAlign: 'end' }}>
-          <Typography variant='body1' noWrap component='p' fontWeight='bold'>
+          <Typography variant='body1' color={color} noWrap component='p' fontWeight='bold'>
             {moneyPrefix + amount}
           </Typography>
           <Typography
