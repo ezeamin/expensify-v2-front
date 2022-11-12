@@ -13,6 +13,23 @@ const Navbar = () => {
     (state: StateType) => state.globalData.navegationActive
   );
 
+  const children = (
+    <Stack
+      direction='row'
+      justifyContent='space-evenly'
+      alignItems='center'
+      sx={{ height: '100%' }}
+    >
+      {viewsList.map((view) => (
+        <NavItem
+          key={view.name}
+          {...view}
+          active={activeNavegationId === view.id}
+        />
+      ))}
+    </Stack>
+  );
+
   return (
     <Paper
       sx={{
@@ -24,22 +41,14 @@ const Navbar = () => {
         boxShadow: '0 0 10px 1px #00000018',
       }}
     >
-      <Container sx={{ height: '100%' }} maxWidth='md'>
-        <Stack
-          direction='row'
-          justifyContent='space-evenly'
-          alignItems='center'
-          sx={{ height: '100%' }}
-        >
-          {viewsList.map((view) => (
-            <NavItem
-              key={view.name}
-              {...view}
-              active={activeNavegationId === view.id}
-            />
-          ))}
-        </Stack>
-      </Container>
+      {/* Delete container for small devices, as it reduces space */}
+      {window.innerWidth > 900 ? (
+        <Container sx={{ height: '100%' }} maxWidth='md'>
+          {children}
+        </Container>
+      ) : (
+        <>{children}</>
+      )}
     </Paper>
   );
 };

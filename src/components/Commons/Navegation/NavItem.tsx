@@ -1,34 +1,32 @@
 import { useDispatch } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
 
 import { setNavegationActive } from 'features/globalData/globalDataSlice';
 
-import { Stack, Typography, Button } from '@mui/material';
+import { Stack, Typography } from '@mui/material';
 
 import { NavItemPropsType } from './types/navegationTypes';
+
+import { WavyLink } from 'react-wavy-transitions';
 
 const NavItem = (props: NavItemPropsType) => {
   const { id, icon, name, path, active } = props;
 
-  const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const handleClick = () => {
     dispatch(setNavegationActive(id));
-    navigate(path);
   };
 
   return (
-    <Button
-      onClick={handleClick}
-      sx={{
-        fontSize: '1.2rem',
-        height: '100%',
-        width: '100%',
-        color: active ? 'primary.main' : 'gray.main',
-      }}
-    >
-      <Stack>
+    // WavyLink is a component that allows you to animate the transition between pages
+    <WavyLink direction="down" color='#ef8767' to={path}>
+      <Stack
+        sx={{
+          fontSize: '1.2rem',
+          color: active ? 'primary.main' : 'gray.main',
+        }}
+        onClick={handleClick}
+      >
         <Typography>
           <i className={icon}></i>
         </Typography>
@@ -40,7 +38,7 @@ const NavItem = (props: NavItemPropsType) => {
           {name}
         </Typography>
       </Stack>
-    </Button>
+    </WavyLink>
   );
 };
 

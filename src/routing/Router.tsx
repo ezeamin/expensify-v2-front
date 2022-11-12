@@ -1,8 +1,10 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 import routes from '../constants/routes';
 import { RoutesTypes } from '@constants/types/routesTypes';
-import PrivateRoute from './PrivateRoute';
+
 import Layout from 'views/Layout/Layout';
+import PrivateRoute from './PrivateRoute';
 
 const authRoutes = Object.keys(routes.AUTH);
 const mainRoutes = Object.keys(routes.MAIN);

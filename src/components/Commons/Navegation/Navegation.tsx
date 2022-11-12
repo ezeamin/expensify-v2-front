@@ -7,7 +7,7 @@ const Navegation = () => {
   return (
     <Box sx={{
       position:"relative",
-      zIndex:"999"
+      zIndex:"99999"
     }}>
       <Navbar />
       <SpeedDialMenu />

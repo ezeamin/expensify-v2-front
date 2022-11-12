@@ -6,6 +6,8 @@ import { Container } from '@mui/material';
 
 import { Outlet } from 'react-router-dom';
 
+import { WavyContainer } from 'react-wavy-transitions';
+
 const Layout = () => {
   const [of, setOf] = useState('hidden');
 
@@ -17,6 +19,8 @@ const Layout = () => {
 
   return (
     <>
+      {/* For animations in transition */}
+      <WavyContainer />
       <Navegation />
       <Container
         sx={{
