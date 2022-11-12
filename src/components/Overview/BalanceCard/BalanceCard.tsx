@@ -70,6 +70,19 @@ const BalanceCard = (props: UserState) => {
         }}
         className='animate-in-zoom'
       />
+      <CircleStyled
+        sx={{
+          width: '15rem',
+          height: '15rem',
+          backgroundColor: 'primary.variant3',
+          position: 'absolute',
+          left: '-8rem',
+          bottom: '-8rem',
+          zIndex: -1,
+          animationDelay: '300ms',
+        }}
+        className='animate-in-zoom'
+      />
       <Box
         sx={{
           height: '100%',
