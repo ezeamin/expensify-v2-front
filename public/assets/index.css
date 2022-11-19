@@ -15,7 +15,7 @@
   align-items: center;
 }
 
-/* Animations */
+/* In Animations */
 
 @keyframes in-keyframes-bottom {
   0% {
@@ -74,3 +74,63 @@
 .animate-in-zoom {
   animation: in-keyframes-zoom 0.75s both;
 }
+
+/* Out Animations */
+
+@keyframes out-keyframes-bottom {
+  0% {
+    opacity: 1;
+    translate: 0 0;
+  }
+  100% {
+    opacity: 0;
+    translate: 0 50%;
+  }
+}
+/* 
+@keyframes in-keyframes-right {
+  0% {
+    opacity: 0;
+    translate: 30% 0;
+  }
+  100% {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+@keyframes in-keyframes-top {
+  0% {
+    opacity: 0;
+    translate: 0 -40%;
+  }
+  100% {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+@keyframes in-keyframes-zoom {
+  0% {
+    scale: 0
+  }
+  100% {
+    scale: 1
+  }
+} */
+
+.animate-out-bottom {
+  animation: out-keyframes-bottom 0.75s both;
+}
+/* 
+.animate-in-right {
+  animation: in-keyframes-right 0.75s both;
+}
+
+.animate-in-top {
+  animation: in-keyframes-top 0.5s both;
+}
+
+.animate-in-zoom {
+  animation: in-keyframes-zoom 0.75s both;
+} */
