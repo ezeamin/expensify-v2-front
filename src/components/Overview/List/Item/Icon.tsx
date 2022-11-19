@@ -1,5 +1,5 @@
 import { IconType } from 'components/Overview/types/IconTypes';
-import { movements } from 'constants/movements';
+import { movementsViews } from 'constants/movements';
 
 import { Stack } from '@mui/material';
 
@@ -9,13 +9,13 @@ const Icon = (props: IconType) => {
   let bgColor = 'gray.light';
 
 //   switch (type) {
-//     case movements.EXPENSE:
+//     case movementsViews.EXPENSE:
 //       bgColor = 'red.light';
 //       break;
-//     case movements.INCOME:
+//     case movementsViews.INCOME:
 //       bgColor = 'green.light';
 //       break;
-//     case movements.TRANSFER:
+//     case movementsViews.TRANSFER:
 //       bgColor = 'gray.light';
 //       break;
 //     default:

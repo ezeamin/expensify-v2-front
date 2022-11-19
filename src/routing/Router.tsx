@@ -36,7 +36,7 @@ const Router = () => {
               <Route
                 key={route}
                 path={element.path}
-                element={<PrivateRoute component={element.component} needsLogin />}
+                element={<PrivateRoute {...element} needsLogin />}
               />
             );
           })}

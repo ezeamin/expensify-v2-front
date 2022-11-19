@@ -1,8 +1,10 @@
-import { Overview } from 'views/index';
+import { Overview, Accounts, Categories, Error404, Stats, Movement } from 'views/index';
+
 import { Login } from 'components/Auth/index';
+
 import { RoutesTypes } from './types/routesTypes';
 import { viewList } from './authViews';
-import Error404 from 'views/Error/Error404';
+import { movementsViews } from './movements';
 
 const routes: RoutesTypes = {
   // auth
@@ -43,38 +45,53 @@ const routes: RoutesTypes = {
       path: '/',
       component: Overview,
     },
-    DATA_MENU: {
-      path: '/data-menu',
-      component: Overview,
+    CATEGORIES: {
+      path: '/categories',
+      component: Categories,
     },
-    DATA_TABLES: {
-      path: '/data-tables',
-      component: Overview,
+    ACCOUNTS: {
+      path: '/accounts',
+      component: Accounts,
     },
     STATS: {
       path: '/stats',
-      component: Overview,
+      component: Stats,
     },
     EXPENSE: {
       path: '/expense',
-      component: Overview,
+      component: Movement,
+      args: {
+        movement: movementsViews.EXPENSE,
+      },
     },
     INCOME: {
       path: '/income',
-      component: Overview,
+      component: Movement,
+      args: {
+        movement: movementsViews.INCOME,
+      },
     },
     TRANSFER: {
       path: '/transfer',
-      component: Overview,
+      component: Movement,
+      args: {
+        movement: movementsViews.TRANSFER,
+      },
     },
     DEBT: {
       path: '/debt',
-      component: Overview,
+      component: Movement,
+      args: {
+        movement: movementsViews.DEBT,
+      },
     },
     PAYMENT: {
       path: '/payment',
-      component: Overview,
-    }
+      component: Movement,
+      args: {
+        movement: movementsViews.PAYMENT,
+      },
+    },
   },
 
   OTHER: {

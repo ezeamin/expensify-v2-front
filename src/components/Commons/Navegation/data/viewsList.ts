@@ -14,13 +14,13 @@ const viewsList: viewType[] = [
     id: "CATEGORIES",
     name: lang.t('CATEGORIES'),
     icon: 'fa-solid fa-utensils',
-    path: routes.MAIN.DATA_MENU.path,
+    path: routes.MAIN.CATEGORIES.path,
   },
   {
     id: "ACCOUNTS",
     name: lang.t('ACCOUNTS'),
     icon: 'fa-brands fa-cc-visa',
-    path: routes.MAIN.DATA_TABLES.path,
+    path: routes.MAIN.ACCOUNTS.path,
   },
   {
     id: "STATS",

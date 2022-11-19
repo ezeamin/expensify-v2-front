@@ -14,8 +14,8 @@ export type RoutesTypes = {
 
   MAIN: {
     HOME: RouteType;
-    DATA_MENU: RouteType;
-    DATA_TABLES: RouteType;
+    CATEGORIES: RouteType;
+    ACCOUNTS: RouteType;
     STATS: RouteType;
     EXPENSE: RouteType;
     INCOME: RouteType;

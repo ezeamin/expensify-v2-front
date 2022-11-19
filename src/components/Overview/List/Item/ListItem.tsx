@@ -1,4 +1,4 @@
-import { movements } from 'constants/movements';
+import { movementsViews } from 'constants/movements';
 
 import { Button, Stack, Typography, Box } from '@mui/material';
 
@@ -21,20 +21,19 @@ const ListItem = (props: any) => {
   let color = '';
 
   switch (type) {
-    case movements.EXPENSE:
+    case movementsViews.EXPENSE:
       moneyPrefix = '- $';
       color = 'red.main';
       break;
-    case movements.INCOME:
+    case movementsViews.INCOME:
       moneyPrefix = '+ $';
       color = 'green.dark';
       break;
-    case movements.TRANSFER:
+    case movementsViews.TRANSFER:
       moneyPrefix = '$';
       color = 'yellow.main';
       break;
-    case movements.OTHER_DEBT:
-    case movements.OWN_DEBT:
+    case movementsViews.DEBT:
       moneyPrefix = '$';
       color = 'primary.main';
       break;
