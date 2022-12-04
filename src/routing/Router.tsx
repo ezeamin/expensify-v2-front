@@ -5,7 +5,6 @@ import { RoutesTypes } from '@constants/types/routesTypes';
 
 import Layout from 'views/Layout/Layout';
 import PrivateRoute from './PrivateRoute';
-import { AnimatePresence } from 'framer-motion';
 
 const authRoutes = Object.keys(routes.AUTH);
 const mainRoutes = Object.keys(routes.MAIN);
