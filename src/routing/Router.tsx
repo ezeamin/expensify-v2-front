@@ -13,48 +13,49 @@ const otherRoutes = Object.keys(routes.OTHER);
 const Router = () => {
   return (
     <BrowserRouter>
-      <Routes>
-        {/* Auth routes */}
-        {authRoutes.map((route: string) => {
-          const element = routes.AUTH[route as keyof RoutesTypes['AUTH']];
-
-          return (
-            <Route
-              key={route}
-              path={element.path}
-              element={<PrivateRoute component={element.component} />}
-            />
-          );
-        })}
-
-        {/* Protected routes */}
-        <Route path='/' element={<Layout />}>
-          {mainRoutes.map((route: string) => {
-            const element = routes.MAIN[route as keyof RoutesTypes['MAIN']];
+        <Routes>
+          {/* Auth routes */}
+          {authRoutes.map((route: string) => {
+            const element = routes.AUTH[route as keyof RoutesTypes['AUTH']];
 
             return (
               <Route
                 key={route}
                 path={element.path}
-                element={<PrivateRoute {...element} needsLogin />}
+                element={<PrivateRoute {...element} />}
               />
             );
           })}
-        </Route>
 
-        {/* Other routes */}
-        {otherRoutes.map((route: string) => {
-          const element = routes.OTHER[route as keyof RoutesTypes['OTHER']];
+          {/* Protected routes */}
+          <Route path='/' element={<Layout />}>
+            {mainRoutes.map((route: string) => {
+              const element = routes.MAIN[route as keyof RoutesTypes['MAIN']];
 
-          return (
-            <Route
-              key={route}
-              path={element.path}
-              element={<PrivateRoute component={element.component} />}
-            />
-          );
-        })}
-      </Routes>
+              return (
+                
+                <Route
+                  key={route}
+                  path={element.path}
+                  element={<PrivateRoute {...element} needsLogin />}
+                />
+              );
+            })}
+          </Route>
+
+          {/* Other routes */}
+          {otherRoutes.map((route: string) => {
+            const element = routes.OTHER[route as keyof RoutesTypes['OTHER']];
+
+            return (
+              <Route
+                key={route}
+                path={element.path}
+                element={<PrivateRoute {...element} />}
+              />
+            );
+          })}
+        </Routes>
     </BrowserRouter>
   );
 };

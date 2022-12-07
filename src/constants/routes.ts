@@ -1,9 +1,18 @@
-import { Overview, Accounts, Categories, Error404, Stats, Movement } from 'views/index';
+import {
+  Overview,
+  Accounts,
+  Categories,
+  Error404,
+  Stats,
+  Movement,
+  Settings,
+  UserSettings
+} from 'views/index';
 
 import { Login } from 'components/Auth/index';
 
 import { RoutesTypes } from './types/routesTypes';
-import { viewList } from './authViews';
+import { viewList } from './views/authViews';
 import { movementsViews } from './movements';
 
 const routes: RoutesTypes = {
@@ -91,6 +100,14 @@ const routes: RoutesTypes = {
       args: {
         movement: movementsViews.PAYMENT,
       },
+    },
+    SETTINGS: {
+      path: '/settings',
+      component: Settings,
+    },
+    SETTINGS_USER: {
+      path: '/settings/user',
+      component: UserSettings,
     },
   },
 

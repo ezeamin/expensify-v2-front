@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
 import { Typography, Stack } from '@mui/material';
@@ -9,13 +10,17 @@ import SettingsRoundedIcon from '@mui/icons-material/SettingsRounded';
 
 import useGetCurrentTheme from 'hooks/useGetCurrentTheme';
 
+import routes from 'constants/routes';
+
 const Header = (props: { name: string }) => {
   const { name } = props;
-  
+
   const { t } = useTranslation();
 
   const theme = useGetCurrentTheme();
-  
+
+  const navigate = useNavigate();
+
   return (
     <Stack direction='row' justifyContent='space-between' alignItems='center'>
       <div>
@@ -48,7 +53,11 @@ const Header = (props: { name: string }) => {
             }}
           />
         </CircleButtonStyled>
-        <CircleButtonStyled className='animate-in-right' theme={theme}>
+        <CircleButtonStyled
+          className='animate-in-right'
+          onClick={() => navigate(routes.MAIN.SETTINGS.path)}
+          theme={theme}
+        >
           <SettingsRoundedIcon
             sx={{
               color: 'mainText.main',

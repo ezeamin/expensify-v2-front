@@ -1,12 +1,14 @@
-import themes from 'constants/themes';
 import { createSlice } from '@reduxjs/toolkit';
+
 import { GlobalDataState } from './globalDataTypes';
-import viewsList from 'components/Commons/Navegation/data/viewsList';
+
+import themes from 'constants/themes';
 import { LanguagesList } from 'constants/languagesList';
+
 
 const initialState: GlobalDataState = {
   theme: themes.LIGHT,
-  navegationActive: viewsList[0].id,
+  navegationActive: "OVERVIEW",
   language: LanguagesList.SPANISH,
 };
 

@@ -1,5 +1,6 @@
 export interface PrivateRouteProps {
-    component: React.ComponentType<any>;
+    component: React.FC;
     args?: any;
     needsLogin?: boolean;
+    path: string;
 }

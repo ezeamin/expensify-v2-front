@@ -26,6 +26,7 @@ const Layout = () => {
         sx={{
           mt: 3,
           mb: 15,
+          pb: 1,
           overflowY: of,
           overflowX: 'hidden',
         }}

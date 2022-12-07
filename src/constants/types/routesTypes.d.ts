@@ -22,6 +22,8 @@ export type RoutesTypes = {
     TRANSFER: RouteType;
     DEBT: RouteType;
     PAYMENT: RouteType;
+    SETTINGS: RouteType;
+    SETTINGS_USER: RouteType;
   };
 
   OTHER: {

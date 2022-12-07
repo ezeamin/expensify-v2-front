@@ -2,7 +2,7 @@ import { useSelector } from 'react-redux';
 
 import { StateType } from 'app/storeTypes';
 
-import { Header,BalanceCard,List } from 'components/Overview';
+import { Header, BalanceCard, List } from 'components/Overview';
 
 const Overview = () => {
   const user = useSelector((state: StateType) => state.user.user);
