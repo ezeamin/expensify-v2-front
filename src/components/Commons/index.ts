@@ -1,3 +1,4 @@
+import Header from './Header/Header';
 import Navegation from './Navegation/Navegation';
 
-export { Navegation };
+export { Header, Navegation };

@@ -1,7 +1,16 @@
+import Header from "components/Commons/Header/Header";
+
+import { useTranslation } from "react-i18next";
+
+
 const Payment = () => {
+  const { t } = useTranslation();
+
   return (
-    <div>Payment</div>
-  )
+    <>
+      <Header title={t('ADD_PAYMENT')}/>
+    </>
+  );
 }
 
 export default Payment

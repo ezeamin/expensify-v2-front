@@ -117,6 +117,8 @@
   "ADD_TRANSFER": "Añadir transferencia",
   "ADD_EXPENSE": "Añadir gasto",
   "ADD_INCOME": "Añadir ingreso",
+  "ADD_DEBT": "Añadir deuda",
+  "ADD_PAYMENT": "Añadir recurrencia",
 
   "REMOVE_TRANSFER": "Eliminar transferencia",
   "REMOVE_EXPENSE": "Eliminar gasto",

@@ -1,11 +1,15 @@
-import { Link } from 'react-router-dom';
+import Header  from "components/Commons/Header/Header";
+
+import { useTranslation } from "react-i18next";
 
 const Expense = () => {
+  
+  const { t } = useTranslation();
+
   return (
-    <div>
-      Expense
-      <Link to='/'>Hola</Link>
-    </div>
+    <>
+      <Header title={t('ADD_EXPENSE')}/>
+    </>
   );
 };
 
